@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AuthGuardDemo';
+  isLoggedIn = "false";
+  constructor(){
+    localStorage.setItem("isLoggedIn","false");
+  }
+
+  logout(){
+    localStorage.setItem("isLoggedIn","false");
+  }
 }
